@@ -1,0 +1,27 @@
+/* .container {
+    width: 1140px;
+    /* height: 100vh; */
+    /* padding: 0 10px;
+    margin: 0 auto;
+} */ 
+
+.container {
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+  @media screen and (min-width: 293px) {
+  .container {
+    max-width: 293px;
+  }
+}
+@media screen and (min-width: 634px) {
+  .container {
+    max-width: 634px;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .container {
+    max-width: 1140px;
+  }
+}
