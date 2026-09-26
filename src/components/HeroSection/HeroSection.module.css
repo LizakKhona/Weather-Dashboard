@@ -1,0 +1,135 @@
+.heroSection {
+    width: 393px;
+    margin: 0 auto;
+        background-image: url("../../images/Rectangle\ 2.png"), url("../../images/sunset.jpg");
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
+    /* background-position-x: center; */
+    @media screen and (min-width: 634px) {
+        width: 834px;
+        padding-top: 40px;
+    padding-bottom: 40px;
+    }
+    @media screen and (min-width: 1140px) {
+        width: 1440px;
+        padding-top: 100px;
+    padding-bottom: 100px;
+    }
+}
+
+.heroTitle {
+    width: 144px;
+font-weight: 600;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+margin: 0 auto;
+color: white;
+margin-bottom: 35px;
+@media screen and (min-width: 634px) {
+    font-size: 20px;
+    width: 206px;
+    margin-bottom: 40px;
+}
+@media screen and (min-width: 1140px) {
+    font-size: 40px;
+    width: 411px;
+    margin-bottom: 80px;
+}
+}
+
+.box {
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 25px;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 634px) {
+            margin-right: 46px;
+    }
+    @media screen and (min-width: 1140px) {
+        margin-right: 90px;
+    }
+}
+
+.box::after {
+    content: "";
+    display: block;
+    background-color: white;
+    width: 2px;
+    height: 80px;
+    
+    @media screen and (min-width: 634px) {
+        display: none;
+    }
+    
+}
+.thumb {
+    color: white;
+    @media screen and (min-width: 634px) {
+        display: flex;
+        column-gap: 34px;
+    }
+    @media screen and (min-width: 1140px) {
+        column-gap: 57px;
+    }
+}
+
+.text{
+    width: 136px;
+    font-weight: 400;
+font-size: 10px;
+line-height: 100%;
+text-align: left;
+color: white;
+margin-bottom: 20px;
+
+@media screen and (min-width: 634px) {
+    display: flex;
+    column-gap: 34px;
+    font-size: 14px;
+text-align: right;
+width: 209px;
+}
+@media screen and (min-width: 1140px) {
+    column-gap: 52px;
+    font-size: 24px;
+    width: 348px;
+}
+}
+
+.text::after {
+    @media screen and (min-width: 634px) {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 110px;
+        background-color: white;
+    }
+    @media screen and (min-width: 634px) {
+        height: 144px;
+        width: 7px;
+    }
+}
+
+
+.dateNow {
+    width: 86px;
+    color: white;
+    text-align: left;
+    font-weight: 400;
+font-size: 10px;
+line-height: 100%;
+letter-spacing: 0%;
+@media screen and (min-width: 634px) {
+    font-size: 14px;
+    width: 121px;
+}
+@media screen and (min-width: 1140px) {
+    font-size: 24px;
+    width: 210px;
+}
+}
