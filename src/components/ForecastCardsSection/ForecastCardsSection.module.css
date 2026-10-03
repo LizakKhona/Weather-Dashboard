@@ -1,0 +1,249 @@
+.forecastCardsSection{
+    background-color: #fff;
+    padding-top: 35px;
+    width: 393px;
+    margin: 0 auto;
+    @media screen and (min-width: 634px) {
+        width: 834px;
+        padding-top: 50px;
+    }
+    @media screen and (min-width: 1140px) {
+        width: 1440px;
+        padding-top: 60px;
+    }
+}
+
+.cardsList {
+    display: flex;
+    width: 293px;
+    flex-direction: column;
+    row-gap: 28px;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+    flex-wrap: wrap;
+    @media screen and (min-width: 634px) {
+        width: 634px;
+        row-gap: 35px;
+        flex-direction: row;
+        column-gap: 110px;
+    }
+    @media screen and (min-width: 1140px) {
+        width: 1140px;
+        column-gap: 90px;
+    }
+}
+
+.card {
+    width: 293px;
+    padding: 15px 15px 20px;
+    background-color: #E8E8E8;
+    border-radius: 20px;
+    @media screen and (min-width: 634px) {
+        width: 262px;
+        padding: 12px 17px 17px;
+    }
+    @media screen and (min-width: 1140px) {
+        width: 320px;
+        padding: 15px 20px 21px;
+    }
+}
+
+.location {
+    display: flex;
+    justify-content: space-between;
+}
+
+.locationCity {
+    font-size: 12px;
+    color: #000;
+    @media screen and (min-width: 1140px) {
+        font-size: 14px;
+    }
+}
+
+.locationCountry {
+    font-size: 12px;
+    text-align: right;
+    color: #000;
+    @media screen and (min-width: 1140px) {
+        font-size: 14px;
+    }
+}
+
+.time {
+    display: block;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 11px;
+    margin-top: 25px;
+    @media screen and (min-width: 634px) {
+        font-size: 20px;
+    }
+    @media screen and (min-width: 1140px) {
+        font-size: 24px;
+    }
+}
+
+.forecastsList {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    column-gap: 21px;
+    justify-content: center;
+    @media screen and (min-width: 1140px) {
+        column-gap: 25px;
+    }
+}
+
+.forecastsBtn {
+    display: block;
+    padding: 6px 11.5px;
+    background-color: #FFB36C;
+    border-radius: 5px;
+    border: none;
+    font-size: 9px;
+text-align: right;
+color: #000;
+    @media screen and (min-width: 1140px) {
+        padding: 8px 18px;
+        font-size: 10px;
+    }
+}
+
+.box {
+    display: flex;
+    column-gap: 12px;
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    @media screen and (min-width: 634px) {
+        margin-bottom: 27px;
+    }
+    @media screen and (min-width: 1140px) {
+        margin-bottom: 22px;
+        margin-top: 15px;
+    }
+}
+
+.date {
+    font-size: 12px;
+text-align: right;
+color: #000;
+display: flex;
+column-gap: 12px;
+align-items: center;
+    @media screen and (min-width: 1140px) {
+        font-size: 14px;
+    }
+}
+
+.date::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 14px;
+    background-color: black;
+    @media screen and (min-width: 1140px) {
+        height: 17px;
+    }
+}
+
+.day {
+    font-size: 12px;
+    color: #000;
+    @media screen and (min-width: 1140px) {
+        font-size: 14px;
+    }
+}
+
+.weatherImg {
+    width: 83px;
+    height: 83px;
+    @media screen and (min-width: 634px) {
+        width: 76px;
+        height: 76px;
+    }
+    @media screen and (min-width: 1140px) {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.temperature {
+    display: block;
+    font-size: 24px;
+text-align: center;
+color: #000;
+margin-top: 25px;
+    @media screen and (min-width: 1140px) {
+        font-size: 32px;
+    }
+}
+
+.thumb {
+    display: flex;
+    justify-content: center;
+    margin-top: 44px;
+    align-items: center;
+    @media screen and (min-width: 634px) {
+        margin-top: 35px;
+    }
+    @media screen and (min-width: 1140px) {
+        margin-top: 39px;
+    }
+}
+
+.buttonsList {
+    display: flex;
+    column-gap: 14px;
+    list-style: none;
+    padding: 0;
+    @media screen and (min-width: 1140px) {
+        column-gap: 16px;
+    }
+}
+
+.button {
+    display: block;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    @media screen and (min-width: 1140px) {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.icon {
+ width: 24px;
+ height: 24px;
+    @media screen and (min-width: 1140px) {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.seeMoreBtn {
+    display: block;
+    padding: 8px 20px;
+    background-color: #FFB36C;
+    border-radius: 5px;
+    border: none;
+    font-size: 9px;
+text-align: right;
+color: #000;
+margin-left: 32px;
+margin-right: 27px;
+    @media screen and (min-width: 634px) {
+        padding: 6px 18.5px;
+        margin-right: 30px;
+    }
+    @media screen and (min-width: 1140px) {
+        padding: 8px 25px;
+        margin-right: 30px;
+        font-size: 10px;
+    }
+}

@@ -11,7 +11,7 @@ import { Container } from "../Container/Container";
 
 
 
-export const HeroSection = () => { 
+export const HeroSection = ({setForecast, onChange}) => { 
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
@@ -20,11 +20,11 @@ export const HeroSection = () => {
   const currentDate = {
     year: dateTime.getFullYear(),
     month: months[dateTime.getMonth()],
-    date: `${dateTime.getDate()}${dateEnding()}`,
+    date: `${dateTime.getDate()}${dateEnding(dateTime.getDate())}`,
     day: daysOfWeek[dateTime.getDay() - 1],
   };
 
-  const {year, month, date, day} = currentDate
+  const { year, month, date, day } = currentDate  
 
   function dateEnding(date) {
     switch (date) {
@@ -52,7 +52,7 @@ export const HeroSection = () => {
               <p className={dateNow}>{`${month} ${year} ${day}, ${date}`}</p>
             </div>
           </div>
-          <SearchInput />
+          <SearchInput onChange={onChange} setForecast={setForecast} />
         </Container>
       </section>
     );
