@@ -1,0 +1,104 @@
+/* Основний контейнер секції */
+.gallery {
+    width: 100%;
+    padding-bottom: 48px;
+}
+
+/* Заголовок секції */
+.title {
+    width: fit-content;
+    margin: 0 150px 40px;
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+}
+
+/* Контейнер слайдера */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 211px;
+}
+
+/* Контейнер для всіх фотографій */
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 211px;
+
+    overflow: hidden;
+}
+
+/* Загальні стилі для фотографій */
+.slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    overflow: hidden;
+
+    /* Плавний рух фотографій */
+    transition:
+        transform 350ms ease-out,
+        width 350ms ease-out,
+        height 350ms ease-out,
+        opacity 250ms ease-out;
+}
+
+/* Зображення займає весь контейнер */
+.slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* Затемнення поверх фотографій */
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    background-color: #000;
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: opacity 500ms ease;
+}
+
+/* Другі фотографії --> затемнення 35% */
+.overlaySecond {
+    opacity: 0.35;
+}
+
+/* Треті фотографії --> затемнення 50% */
+.overlayThird {
+    opacity: 0.5;
+}
+
+/* Галерея прихована всюди, окрім DESKTOP */
+@media screen and (max-width: 1199px) {
+    .gallery {
+        display: none;
+    }
+}
+
+/* Галерея відображається на DESKTOP */
+@media screen and (min-width: 1200px) {
+    .gallery {
+        display: block;
+    }
+}
+
+/* Враховуємо налаштування зменшення анімації */
+@media (prefers-reduced-motion: reduce) {
+
+    .slide,
+    .overlay {
+        transition: none;
+    }
+}

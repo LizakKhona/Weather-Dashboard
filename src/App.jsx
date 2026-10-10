@@ -1,8 +1,10 @@
+
 import { useState, useEffect } from 'react'
 import './App.css'
 import { HeroSection } from './components/HeroSection/HeroSection'
 import { ForecastCardsSection } from './components/ForecastCardsSection/ForecastCardsSection'
-import {getWeatherForcast} from "./apiServices/weatherForecast"
+import { getWeatherForcast } from "./apiServices/weatherForecast"
+import Gallery from './components/Gallery/Gallery'
 
 
 function App() {
@@ -21,15 +23,17 @@ function App() {
       setCityForecastData(response);
     });
   }, [normalizedCitySearchName]);
-  
-  
+
+
 
   return (
     <>
-      <HeroSection onChange={onChange} />
+      <HeroSection onC
+        hange={onChange} />
       <ForecastCardsSection
         cityForecastData={cityForecastData}
       />
+      <Gallery />
     </>
   );
 }
