@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react'
 import './App.css'
 import { HeroSection } from './components/HeroSection/HeroSection'
@@ -5,6 +6,7 @@ import { ForecastCardsSection } from './components/ForecastCardsSection/Forecast
 import { getWeatherForcast } from "./apiServices/weatherForecast"
 import { DetailedForecastSection } from './components/DetailedForecastSection/DetailedForecastSection'
 
+import Gallery from './components/Gallery/Gallery'
 
 
 function App() {
@@ -52,19 +54,20 @@ function App() {
     setDetailedCardObject(object)
     setIsShowCardInfo(true)  
   }
-  console.log(detailedCardObject);
 
-  
+
 
   return (
     <>
-      <HeroSection onChange={onChange} />
+      <HeroSection onC
+        hange={onChange} />
       <ForecastCardsSection
         showDetailedInfo={showDetailedInfo}
         onChange={onChange}
         cityForecastData={cityForecastData}
       />
       {isShowCardInfo && <DetailedForecastSection detailedCardObject={detailedCardObject} />}
+      <Gallery />
     </>
   );
 }
