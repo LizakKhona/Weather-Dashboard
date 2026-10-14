@@ -1,0 +1,144 @@
+.image {
+    display: block;
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-size: contain;
+    margin-top: 18px;
+    @media screen and (min-width: 634px) {
+        margin-top: 37px;
+    }
+    @media screen and (min-width: 1140px) {
+        width: 85px;
+        height: 85px;
+        margin-top: 34px;
+    }
+}
+.tempImage {
+    background-image: url("../../images/temp.png");
+}
+.humidityImage {
+    background-image: url("../../images/humidity.png");
+}
+.pressureImage {
+    background-image: url("../../images/pressure.png");
+}
+.windImage {
+    background-image: url("../../images/wind.png");
+}
+.visibilityImage {
+    background-image: url("../../images/visibility.png");
+}
+
+.detailedForecastSection {
+    background-color: #fff;
+    padding-top: 35px;
+    width: 393px;
+    margin: 0 auto;
+    @media screen and (min-width: 634px) {
+        width: 834px;
+        padding-top: 50px;
+    }
+    @media screen and (min-width: 1140px) {
+        width: 1440px;
+        padding-top: 80px;
+    }
+}
+
+.detailedForecastList {
+    display: flex;
+    flex-direction: column;
+    background-color: #E8E8E8;
+    border-radius: 15px;
+    list-style: none;
+    padding: 35px 43px;
+    margin: 0 auto;
+    row-gap: 35px;
+    width: 293px;
+    @media screen and (min-width: 634px) {
+        padding: 30px;
+        width: 634px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        column-gap: 21px;
+        justify-content: center;
+        align-items: center;
+    }
+    @media screen and (min-width: 1140px) {
+        padding: 40px 77px;
+        width: 1140px;
+        column-gap: 58px;
+        row-gap: 40px;
+        border-radius: 20px;
+    }
+}
+.detailedForecastItem {
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 207px;
+    @media screen and (min-width: 634px) {
+        width: 177px;
+        height: 200px;
+    }
+    @media screen and (min-width: 1140px) {
+        padding: 20px 20px;
+        width: 290px;
+        height: 217px;
+    }
+}
+.minMaxTempItem {
+    padding-bottom: 49px;
+    row-gap: 22px;
+    @media screen and (min-width: 634px) {
+        padding-bottom: 65px;
+        row-gap: 29px;
+    }
+    @media screen and (min-width: 1140px) {
+        padding-bottom: 40px;
+        row-gap: 28px;
+    }
+}
+
+/* .thumb:first-child {
+    /* margin-bottom: 22px; */
+    /* @media screen and (min-width: 634px) {
+        margin-bottom: 29px;
+    } */
+    /* @media screen and (min-width: 1140px) {
+        margin-bottom: 19px;
+    } */
+/* } */ 
+
+.measurements {
+    font-size: 10px;
+text-align: center;
+color: #000;
+    height: 20px;
+    @media screen and (min-width: 634px) {
+        font-size: 12px;
+    }
+    @media screen and (min-width: 1140px) {
+        font-size: 16px;
+    }
+}
+
+.measurementsValue {
+    font-size: 14px;
+text-align: center;
+color: #000;
+    height: 17px;
+    margin-top: 8px;
+    @media screen and (min-width: 634px) {
+        font-size: 16px;
+    }
+    @media screen and (min-width: 1140px) {
+        font-size: 32px;
+        margin-top: 18px;
+    }
+}
