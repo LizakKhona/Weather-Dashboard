@@ -10,7 +10,6 @@ import {getWeatherForcast} from "../../apiServices/weatherForecast"
 
 export const ForecastCardsSection = ({
   cityForecastData,
-  onChange,
   showDetailedInfo,
 }) => {
   const [updatedForecast, setUpdatedForecast] = useState(null);
@@ -86,7 +85,7 @@ export const ForecastCardsSection = ({
       <Container>
         <ul className={s.cardsList}>
           {cityForecastData.map(({ name, sys, main, weather }) => (
-            <li key={name} onClick={() => onCardClick(name)} className={s.card}>
+            <li key={name} className={s.card}>
               <div className={s.location}>
                 <p className={s.locationCity}>{name}</p>
                 <p className={s.locationCountry}>{sys?.country}</p>
@@ -135,7 +134,12 @@ export const ForecastCardsSection = ({
                     </button>
                   </li>
                 </ul>
-                <button className={s.seeMoreBtn}>See more</button>
+                <button
+                  onClick={() => onCardClick(name)}
+                  className={s.seeMoreBtn}
+                >
+                  See more
+                </button>
                 <button onClick={onTrashBtnClick} className={s.button}>
                   <FaRegTrashAlt className={s.icon} />
                 </button>

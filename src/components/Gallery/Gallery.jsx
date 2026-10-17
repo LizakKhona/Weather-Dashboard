@@ -6,6 +6,7 @@ import { getNatureImages } from '../../apiServices/galleryService';
 
 // Імпорт CSS Module
 import styles from './Gallery.module.css';
+import { Container } from '../Container/Container';
 
 const Gallery = () => {
     // Масив отриманих фотографій
@@ -83,74 +84,68 @@ const Gallery = () => {
     }
 
     return (
-        <section className={styles.gallery}>
-            {/* Заголовок секції */}
-            <h2 className={styles.title}>Beautiful nature</h2>
+      <section className={styles.gallery}>
+        <Container>
+          {/* Заголовок секції */}
+          <h2 className={styles.title}>Beautiful nature</h2>
 
-            {/* Контейнер слайдера */}
-            <div
-                className={styles.slider}
-                onWheel={handleWheel}
-            >
-                <div className={styles.imageWrapper}>
-                    {images.map((image, index) => {
-                        // Визначає положення фотографії
-                        const offset = getOffset(index);
-                        const distance = Math.abs(offset);
+          {/* Контейнер слайдера */}
+          <div className={styles.slider} onWheel={handleWheel}>
+            <div className={styles.imageWrapper}>
+              {images.map((image, index) => {
+                // Визначає положення фотографії
+                const offset = getOffset(index);
+                const distance = Math.abs(offset);
 
-                        // Початковий розмір дальніх фотографій
-                        let width = 248;
-                        let height = 136;
-                        let position = 347 + (distance - 2) * 248;
+                // Початковий розмір дальніх фотографій
+                let width = 248;
+                let height = 136;
+                let position = 347 + (distance - 2) * 248;
 
-                        // Центральна фотографія
-                        if (distance === 0) {
-                            width = 384;
-                            height = 211;
-                            position = 0;
-                        }
-                        // Фотографії поруч з центральною
-                        else if (distance === 1) {
-                            width = 310;
-                            height = 170;
-                            position = 192;
-                        }
+                // Центральна фотографія
+                if (distance === 0) {
+                  width = 384;
+                  height = 211;
+                  position = 0;
+                }
+                // Фотографії поруч з центральною
+                else if (distance === 1) {
+                  width = 310;
+                  height = 170;
+                  position = 192;
+                }
 
-                        // Визначає затемнення фотографії
-                        let overlayStyle = '';
+                // Визначає затемнення фотографії
+                let overlayStyle = "";
 
-                        if (distance === 1) {
-                            overlayStyle = styles.overlaySecond;
-                        } else if (distance === 2) {
-                            overlayStyle = styles.overlayThird;
-                        }
+                if (distance === 1) {
+                  overlayStyle = styles.overlaySecond;
+                } else if (distance === 2) {
+                  overlayStyle = styles.overlayThird;
+                }
 
-                        return (
-                            <div
-                                key={image.id}
-                                className={styles.slide}
-                                style={{
-                                    width: `${width}px`,
-                                    height: `${height}px`,
-                                    transform: `translate(-50%, -50%) translateX(${offset < 0 ? -position : position}px)`,
-                                    opacity: distance <= 2 ? 1 : 0,
-                                    zIndex: 10 - distance,
-                                }}
-                            >
-                                <img
-                                    src={image.webformatURL}
-                                    alt={image.tags}
-                                />
+                return (
+                  <div
+                    key={image.id}
+                    className={styles.slide}
+                    style={{
+                      width: `${width}px`,
+                      height: `${height}px`,
+                      transform: `translate(-50%, -50%) translateX(${offset < 0 ? -position : position}px)`,
+                      opacity: distance <= 2 ? 1 : 0,
+                      zIndex: 10 - distance,
+                    }}
+                  >
+                    <img src={image.webformatURL} alt={image.tags} />
 
-                                <span
-                                    className={`${styles.overlay} ${overlayStyle}`}
-                                />
-                            </div>
-                        );
-                    })}
-                </div>
+                    <span className={`${styles.overlay} ${overlayStyle}`} />
+                  </div>
+                );
+              })}
             </div>
-        </section>
+          </div>
+        </Container>
+      </section>
     );
 };
 

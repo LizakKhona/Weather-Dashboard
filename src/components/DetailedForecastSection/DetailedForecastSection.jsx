@@ -3,7 +3,6 @@ import s from "./DetailedForecastSection.module.css"
 
 export const DetailedForecastSection = ({ detailedCardObject }) => {
   const { main, wind, weather } = detailedCardObject
-  console.log(detailedCardObject);
   
 
   return (
