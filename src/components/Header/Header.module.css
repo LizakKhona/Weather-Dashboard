@@ -1,0 +1,225 @@
+.thumb {
+    width: 393px;
+    margin: 0 auto;
+    position: relative;
+    @media screen and (min-width: 634px) {
+        width: 834px;
+    }
+    @media screen and (min-width: 1140px) {
+        width: 1440px;
+    }
+}
+.header {
+    width: 393px;
+    padding: 14px 0;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.25);
+    position: fixed;
+        z-index: 1;
+          @media screen and (min-width: 634px) {
+        width: 834px;
+    }
+    @media screen and (min-width: 1140px) {
+        width: 1440px;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.holder {
+    @media screen and (min-width: 634px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 57px;
+    }
+    @media screen and (min-width: 1140px) {
+        column-gap: 111px;
+    }
+}
+
+.logo {
+    width: 34px;
+    height: 22px;
+    background-image: url("../../images/logo2.jpg");
+    background-size: contain;
+    @media screen and (min-width: 634px) {
+        width: 54px;
+        height: 36px;
+    }
+    @media screen and (min-width: 1140px) {
+        width: 82px;
+        height: 56px;
+    }
+}
+
+.navigation {
+    display: none;
+      @media screen and (min-width: 634px) {
+        display: block;
+    }
+}
+
+.subPagesList {
+    @media screen and (min-width: 634px) {
+        padding: 0;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    column-gap: 45px;
+    }
+    @media screen and (min-width: 1140px) {
+        column-gap: 47px;
+    }
+}
+
+.link {
+    @media screen and (min-width: 634px) {
+            font-family: "Montserrat Alternates", sans-serif;
+font-size: 10px;
+color: #000;
+text-decoration: none;
+    }
+    @media screen and (min-width: 1140px) {
+        font-size: 12px;
+    }
+}
+
+.box {
+    display: none;
+     @media screen and (min-width: 634px) {
+        display: flex;
+        column-gap: 25px;
+        align-items: center;
+        justify-content: center;
+    }
+    @media screen and (min-width: 1140px) {
+        column-gap: 27px;
+    }
+}
+
+.signUpBtn {
+  @media screen and (min-width: 634px) {
+      display: block;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+    font-family: "Montserrat Alternates", sans-serif;
+font-weight: 500;
+font-size: 10px;
+color: #000;
+background-color: #FFB36C;
+  }
+  @media screen and (min-width: 1140px) {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+
+.profilePicture {
+    @media screen and (min-width: 634px) {
+        background-image: url("../../images/userPfp.png");
+        background-size: contain;
+        width: 40px;
+        height: 40px;
+    }
+    @media screen and (min-width: 634px) {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+
+
+
+
+.navMenuText {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    column-gap: 3px;
+    @media screen and (min-width: 634px) {
+        display: none;
+    }
+}
+
+
+.menu {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 10px;
+color: #000;
+}
+
+
+.navMenuBox {
+    background-color: #E6E6E6;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    position: absolute;
+    width: 100%;
+}
+
+.navMenuBoxHidden {
+    display: none;
+    
+}
+
+.cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navMenuList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    align-items: start;
+}
+
+.menuLink {
+    font-family: "Montserrat Alternates", sans-serif;
+font-size: 10px;
+color: #000;
+text-decoration: none;
+}
+
+.menuBox {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.menuSignUpBtn {
+    display: block;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+    font-family: "Montserrat Alternates", sans-serif;
+font-weight: 400;
+font-size: 10px;
+color: #000;
+background-color: #FFB36C;
+}
+
+.profilePictureMenu {
+    background-image: url("../../images/userPfp.png");
+    width: 40px;
+    height: 40px;
+}
+
+
+.usernameBlock {
+    color: #000;
+    font-weight: 600;
+}

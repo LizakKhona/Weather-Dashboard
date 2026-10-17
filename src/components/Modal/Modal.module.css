@@ -1,0 +1,122 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    opacity: 1;
+}
+
+.modal {
+    position: absolute;
+    width: 293px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 25px;
+    @media screen and (min-width: 634px) {
+        width: 400px;
+        padding: 30px 45px 22px;
+    }
+    @media screen and (min-width: 1140px) {
+        width: 600px;
+        padding: 28px 80px 27px;
+    }
+}
+
+.modalTitle {
+    font-family: "Montserrat Alternates", sans-serif;
+font-size: 20px;
+color: #000;
+margin: 0;
+margin-bottom: 30px;
+    @media screen and (min-width: 1140px) {
+       font-size: 28px;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+     @media screen and (min-width: 1140px) {
+       row-gap: 30px;
+    }
+}
+
+.label {
+font-size: 12px;
+color: #000;
+display: flex;
+flex-direction: column;
+row-gap: 15px;
+text-align: left;
+ @media screen and (min-width: 1140px) {
+       font-size: 14px;
+    }
+}
+
+.input {
+    width: 243px;
+    padding: 12px 0 13px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #E4E4E4;
+    @media screen and (min-width: 634px) {
+      width: 310px;
+    }
+    @media screen and (min-width: 1140px) {
+      width: 440px;
+      padding: 17px 0 16px 20px;
+    }
+}
+
+.input::placeholder {
+    font-size: 12px;
+color: #ababab;
+ @media screen and (min-width: 1140px) {
+       font-size: 14px;
+    }
+}
+
+.modalSignUpBtn {
+    font-weight: 400;
+font-size: 12px;
+color: #000;
+padding: 10px 30px;
+background-color: #FFB36C;
+border-radius: 10px;
+border: none;
+margin: 0 auto;
+margin-top: 30px;
+ @media screen and (min-width: 634px) {
+    margin-top: 25px;
+}
+ @media screen and (min-width: 1140px) {
+    font-size: 14px;
+}
+}
+
+.logInText {
+    font-size: 8px;
+color: #000;
+margin: 0 auto;
+margin-top: 15px;
+@media screen and (min-width: 634px) {
+    margin-top: 17px;
+}
+@media screen and (min-width: 1140px) {
+    font-size: 10px;
+    margin-top: 15px;
+}
+}
+
+.logInLink {
+    font-size: 8px;
+color: #000;
+text-decoration: underline;
+}
